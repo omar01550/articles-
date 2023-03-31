@@ -2,6 +2,7 @@ import { handelNav } from "./nav.js";
 import { getArticlesFromDb } from "./functions.js";
 import { handelArticlesUi } from "./functions.js";
 import { Card } from "./functions.js";
+import { checkisCardInFavs } from "./addToFav.js";
 
 handelNav(); // handel nav bar
 
@@ -37,9 +38,4 @@ getArticlesFromDb(`https://newsapi.org/v2/everything?q=pages&apiKey=eca3af45d294
         console.log(articles);
         console.log('done');
     });
-
-
-
-
-
 

@@ -31,7 +31,8 @@ function Card(element) {
     card.classList.add("card");
     card.innerHTML = `
     <div class="card-overlay"></div>
-    <img src=${element.urlToImage} alt=${element.title} />
+    <img class="love-icon" src="../images/empty-heart.png" alt="not found"/>
+    <img src=${element.urlToImage} alt=${element.title} class="article-image"/>
     <div class="card-content">
         <h3 class="card-title">${element.title}</h3>
         <p class="card-text">${element.describtion}</p>
