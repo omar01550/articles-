@@ -8,8 +8,10 @@ let serachInput = document.getElementById("search-box")
 let resultSection = document.querySelector("#search-results .search-result-cards");
 let resultLoder = document.getElementById("result-loder");
 
+const apiKey = "d6e13b09676346608115146fd709df84";
 
 handelNav()
+
 
 
 searchForm.onsubmit = function (e) {
@@ -17,7 +19,7 @@ searchForm.onsubmit = function (e) {
     resultLoder.classList.remove("hidden-loder");
     console.log(resultLoder);
 
-    getArticlesFromDb(`https://newsapi.org/v2/everything?q=${serachInput.value}&apiKey=eca3af45d29448ee972191f842925ca0`)
+    getArticlesFromDb(`https://newsapi.org/v2/everything?q=${serachInput.value}&apiKey=${apiKey}`)
 
         .then((articles) => {
             if (articles.length > 50) {

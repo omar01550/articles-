@@ -1,22 +1,38 @@
+function getFavs() {
 
 
-function checkisCardInFavs(ele, arrayOfFavs) {
-
-    if (ele.classList.contains("love-icon")) {
-        let titleOfArticle = ele.parentNode.querySelector(".card-content .card-title").innerText;
-        //check is article in fas
-        if (arrayOfFavs.filter(ele => ele.title == titleOfArticle).length != 0) {
-            return 'found';
-        } else {
-            return 'notFound'
-        }
-
+    if (window.localStorage.getItem("favs")) {
+        return JSON.parse(window.localStorage.getItem("favs"));
+    } else {
+        return [];
     }
-
 
 }
 
 
+
+
+function checkIsItemInFav(element, favs) {
+    let elementId = element.id;
+
+    if (favs.filter(ele => ele.title == element.id).length != 0) {
+
+        return 'found';
+    } else {
+
+        return 'notfound';
+    }
+}
+
+
+
+
+
+
+
+
+
 export {
-    checkisCardInFavs
+    getFavs,
+    checkIsItemInFav
 }
