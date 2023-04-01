@@ -48,6 +48,7 @@ header .nav-menu {
     top: 0;
     display: flex;
     justify-content: start;
+    z-index: 1000000;
 }
 
 .nav-menu.hidden-nav {
@@ -153,6 +154,16 @@ header i {
     cursor: pointer;
 }
 
+.favs-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favs-link a,
+.favs-link span {
+    display: block;
+}
 
 
 .fav-items {
@@ -753,4 +764,27 @@ ul {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+/* favs page */
+
+#favs-page {
+    width: 100%;
+    min-height: 70vh;
+    background-color: white;
+    color: black;
+
+}
+
+.cards {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+
+
 }

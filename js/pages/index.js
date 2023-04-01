@@ -1,21 +1,23 @@
-import { handelNav } from "./functions/nav.js";
-import { getArticlesFromDb } from "./functions/functions.js";
-import { handelArticlesUi } from "./functions/functions.js";
-import { Card } from "./functions/functions.js";
-import { getFavs } from "./functions/addToFav.js";
-import { checkIsItemInFav } from "./functions/addToFav.js";
-import header from "./components/header.js";
+import { handelNav } from "../functions/nav.js";
+
+import { getArticlesFromDb } from '../functions/functions.js'
+import { handelArticlesUi } from "../functions/functions.js";
+import { Card } from "../functions/functions.js";
+import { getFavs } from "../functions/addToFav.js";
+import { checkIsItemInFav } from "../functions/addToFav.js";
+import header from "../components/header.js";
+
 const apiKey = "d6e13b09676346608115146fd709df84";
 
 // handel Header
-document.querySelector("header").innerHTML = header();
+document.querySelector("header").innerHTML = header;
+
+
 
 
 handelNav(); // handel nav bar
 
-
 // handel favs
-
 
 let favs = getFavs();
 document.documentElement.addEventListener("click", function (e) {
@@ -94,3 +96,4 @@ getArticlesFromDb(`https://newsapi.org/v2/everything?q=pages&apiKey=${apiKey}`)
     });
 
 
+console.log(true);
